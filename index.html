@@ -331,7 +331,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/10/30/hexo/" itemprop="url">
-                  hexo
+                  hexo：入门
                 </a>
               
             
@@ -357,7 +357,7 @@
                 
               
 
-              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：20:01:00" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
+              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：20:12:50" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
             
 
             
@@ -433,6 +433,7 @@
 <h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><ul>
 <li>假设手头有一个linux服务器，我会告诉你AWS可以免费使用一年？ 我会告诉你AWS的服务器在国外？我会告诉你这是一个免费的私有梯子？</li>
 <li>已经有较好的linux基础，熟悉rpm命令</li>
+<li>最好对标记语言有一些认知，熟悉markdown</li>
 <li>熟悉github，并有一个账号</li>
 <li>熟悉git</li>
 </ul>
@@ -441,7 +442,7 @@
 <p>其中，npm是Node.js自带的包管理器，类似rpm、yum、pip等。</p>
 <h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>首先需要初始化好一个工作环境。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt; <span class="comment">#  开启一个静态网站生成管理环境，&lt;&gt;表示必要参数</span></span><br></pre></td></tr></table></figure>
-<p>hexo init 会生成名称为folder的目录，主要文件有一下几个</p>
+<p>hexo init 命令会生成名称为folder的目录，该目录下会有以下几个文件</p>
 <ul>
 <li>_config.yml： hexo的配置文件</li>
 <li>node_modules： hexo相关模块（不太懂）</li>
@@ -450,18 +451,21 @@
 <li>source： 文章的源文件，用markdown等标记语言编写的文本文件，也就是存文章的地方</li>
 <li>themes： 主题目录</li>
 </ul>
-<p>配置hexo的参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  \_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure></p>
+<p>接着需要配置hexo参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  \_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure></p>
 <p>其中，需要配置的内容包括， 详细配置信息参考<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">这里</a></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">xxx</span>                          <span class="comment"># 站点名称</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">xxx</span>                         <span class="comment"># 博客作者名字</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">xxx</span>                    <span class="comment"># 对站点的描述，搜索引擎会抓取，可以自定义</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CH</span>                     <span class="comment"># 简体中文</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span>             <span class="comment"># 本地时区</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">https://xiaolinhong.github.io/</span> <span class="comment"># 配置主页的URL</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span>                         <span class="comment"># 配置主题，启用next主题，默认使用landscape主题</span></span><br></pre></td></tr></table></figure>
 <p>去找一个喜欢的<a href="https://hexo.io/themes" target="_blank" rel="noopener">主题</a>，如 next</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
-<p>生成一个静态网站，目前只有一个默认的介绍post<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g             <span class="comment">#  生成一个静态网站</span></span><br></pre></td></tr></table></figure><br>hexo g 命令会产生一个目录public，<strong>该目录包含了一个静态网站部署所有需要的东西</strong>。</p>
-<p>注意： 除了init命令外，其他命令均是在folder目录中中执行</p>
-<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>主题也有自己的相关配置，以next为例，在themes/next目录中，存在一个_config.yml文件，其中需要配置的包括</p>
+<p>生成一个静态网站，生成的静态网站只是一个骨架（包含一篇hexo自带的文章）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g             <span class="comment">#  生成一个静态网站</span></span><br></pre></td></tr></table></figure><br>hexo g 命令会产生一个目录public，<strong>该目录包含了一个静态网站部署所有需要的东西</strong>。</p>
+<p>注意： 除了init命令外，其他命令均是在folder目录中执行</p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>主题这个话题可以先搁置。</p>
+<p>主题也有自己的相关配置，以next为例，在themes/next目录中，存在一个_config.yml文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  themes/next\_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure>
+<p>其中需要的配置包括主题方案和菜单页面</p>
 <p>主题方案<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure></p>
-<p>设置 菜单<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure></p>
-<p>需要注意的是，除了home和archives菜单，其他菜单的页面需要手动创建，</p>
+<p>菜单页面<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure></p>
+<p>需要注意的是，除了home和archives菜单，其他菜单页面需要手动创建。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page  tags <span class="comment"># 创建tags页面</span></span><br><span class="line">hexo new page  categories <span class="comment">#  创建categories页面</span></span><br></pre></td></tr></table></figure>
 <p>如果配置文件变了，需要清理一下原有的网站<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>网站的发布就是将public目录拷贝至web服务器可以到达的地方。 可以自己安装一个Tomcat，Apache等web服务器，也可以托管到其他网站，如github pages。</p>
 <p>建议采用github pages部署，github pages仅仅是一个git的仓，看起来没有任何特殊之处，可以使用git命令来打理，也可以使用hexo自带的deploy命令管理。</p>
