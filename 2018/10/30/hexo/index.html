@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="喃喃自语">
 <meta property="og:description" content="hexohexo是采用JavaScript编写的，基于Node.js的静态网站生成工具，其作用是将采用markdown等标记语言编写的文本文件渲染成HTML文件，并嵌入一个预先设定好静态web框架中。 静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情。 静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。 为啥hexo最富盛名的作用是个人">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-31T06:39:37.479Z">
+<meta property="og:updated_time" content="2018-10-31T07:48:14.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo">
 <meta name="twitter:description" content="hexohexo是采用JavaScript编写的，基于Node.js的静态网站生成工具，其作用是将采用markdown等标记语言编写的文本文件渲染成HTML文件，并嵌入一个预先设定好静态web框架中。 静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情。 静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。 为啥hexo最富盛名的作用是个人">
@@ -329,7 +329,7 @@
                 
               
 
-              <time title="Created: 2018-10-31 06:01:21 / Modified: 14:39:37" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
+              <time title="Created: 2018-10-31 06:01:21 / Modified: 15:48:14" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
             
 
             
@@ -371,25 +371,37 @@
 <p>静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情。 静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。</p>
 <h3 id="为啥"><a href="#为啥" class="headerlink" title="为啥"></a>为啥</h3><p>hexo最富盛名的作用是个人博客， 使用博客系统可以记录和发表感兴趣的东西，重在分享。 </p>
 <ul>
-<li>为什么不使用已经存在博客系统，如简书： 喜欢一切都能自己掌控；</li>
-<li>为什么不使用其他的静态网站生成工具： 静态网站生成工具很多，我的第一选择并不是hexo， 由于熟悉Python的缘故，且对JavaScript没有研究，开始使用的是Nikola，但Nikola界面不好看，所以选择具有众多主题的hexo，大部分的静态网站生成工具用起来感觉都差不多。</li>
+<li>为什么想要使用博客： 记录，并显摆。</li>
+<li>为什么不使用已经存在博客系统，如简书： 喜欢一切都能自己掌控，对于。</li>
+<li>为什么不使用其他的静态网站生成工具： 静态网站生成工具很多，我的第一选择并不是hexo， 由于熟悉Python的缘故，且对JavaScript没有研究，开始使用的是Nikola，但Nikola界面不好看，所以选择具有众多主题的hexo，大部分的静态网站生成工具用起来感觉都差不多，使用类似，所以挑一个长得好看的。</li>
 </ul>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>hexo是用JavaScript写的一个工具，用nodejs来执行；</p>
-<p>假设已经有很好的linux基础</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nodejs</span><br><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>其中，npm是 nodejs自带的包管理器，类似rpm、pip、yum等。</p>
-<h3 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h3><ul>
-<li>开启一个静态博客项目： hexo init <folder></folder></li>
-<li>配置: _config.yml</li>
-<li>生成一个静态网站： hexo g<br>最后一个命令会产生一个目录public，该目录包含了所有需要部署的东西。</li>
-<li>找一个喜欢的主题: <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></li>
-</ul>
-<h3 id="创造"><a href="#创造" class="headerlink" title="创造"></a>创造</h3><p>  之前所有做的事情，只不过是打开了一个word，只是一个打开，只是一个开始，真正的工作是不断的写文章。 </p>
-<p>  需要写东西的时候，自然而然想到的事情就是打开一个word，往里面写东西就可以了。其实写东西还有很多其他的方法，如markdown， reStructuredText等标记语言，在这里需要理解的是，把思考的东西写出来，并分析给别人这个过程包含了两个事情； 首先是编写内容； 然后是排版格式。 </p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>假设手头有一个linux服务器(我会告诉你AWS可以免费使用一年？ 我会告诉你AWS的服务器在国外？我会告诉你这是一个免费的私有梯子？)，已经有很好的linux基础，熟悉git, 熟悉github。</p>
+<p>hexo是用JavaScript写的一个工具，用nodejs来执行；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nodejs</span><br><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>其中，npm是 nodejs自带的包管理器，类似rpm、yum、pip等。</p>
+<h3 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt; <span class="comment">#  开启一个静态网站生成管理环境</span></span><br><span class="line">vim \_config.yml   <span class="comment">#  配置hexo的参数文件</span></span><br><span class="line">hexo g             <span class="comment">#  生成一个静态网站： </span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">其中 配置的内容包括</span><br><span class="line"></span><br><span class="line">``` yml</span><br><span class="line">title: xxx          <span class="comment"># 站点名称</span></span><br><span class="line">author: xxx         <span class="comment"># 博客作者名字</span></span><br><span class="line">description: xxx    <span class="comment"># 对站点的描述，搜索引擎会抓取，可以自定义</span></span><br><span class="line">language: zh-Hans   <span class="comment"># 简体中文</span></span><br><span class="line">theme: next         <span class="comment"># 配置主题</span></span><br></pre></td></tr></table></figure>
+<p>除了init命令外，其他命令均是在folder中执行</p>
+<p>hexo g 命令会产生一个目录public，该目录包含了一个静态网站部署所有需要的东西。</p>
+<p>找一个喜欢的主题: <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+<p>如 next<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure></p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>网站的发布就是将public拷贝至web服务器可以到达的地方。 可以自己安装一个Tomcat，Apache等web服务器，可以托管到其他网站，如github pages。</p>
+<p>建议采用github pages部署，github pages仅仅是一个git的仓，看起来没有任何特殊之处，可以使用git命令来打理，也可以使用hexo自带的deploy命令管理。</p>
+<p>使用github pages，需要在github上建一个名称为your_user_name.github.io的仓。</p>
+<p>当然在推送前，需要对仓库有写的权限，请在github上添加服务器的ssh公钥（使用ssh-keygen生成）</p>
+<p>如果需要使用deploy命令，需要安装额外的扩展</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git <span class="comment"># 安装扩展，原谅我对nodejs的包管理不熟悉</span></span><br><span class="line">vim \_config.yml   <span class="comment">#  配置有关depoly的参数</span></span><br></pre></td></tr></table></figure>
+<p>其中 配置的内容包括</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:XiaoLinhong/xiaolinhong.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>完成上面的内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;title&gt;  <span class="comment"># 新建文章，文章会保存在source/_posts/中</span></span><br><span class="line">vim title.md      <span class="comment"># 编写文章，当然也可以用其他编辑器，如Sublime</span></span><br><span class="line">hexo g d          <span class="comment"># 生成并提交</span></span><br></pre></td></tr></table></figure></p>
+<p>新建的文章为文本文件，以scaffolds目录中的post.md为模板生成，文章有一些头信息（看起来像是一篇文章的元数据），可以设定一些变量。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span>  <span class="comment"># 这是标题</span></span><br><span class="line"><span class="attr">tags:</span>   <span class="comment"># 这里写的标签会自动汇集到tags页面上</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">工具</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">category:</span>   <span class="comment"># 这里写的分类会自动汇集到categories页面上，分类可以多级</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">工具</span>      <span class="comment"># 一级分类</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span>      <span class="comment"># 二级分类 </span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="string">开始写自己的内容</span></span><br></pre></td></tr></table></figure>
+<h3 id="创造"><a href="#创造" class="headerlink" title="创造"></a>创造</h3><p>  之前所有做的事情，只不过是打开了一个word，<strong>只是一个打开，只是一个开始</strong>，真正的工作是不断的写文章。 </p>
+<p>  需要写东西的时候，自然而然想到的事情就是打开一个word，往里面写东西就可以了。其实写东西还有很多其他的方法，如markdown， reStructuredText等标记语言。</p>
+<p>  在这里需要理解的是，把思考的东西写出来，并分析给别人这个过程包含了两个事情； 首先是编写内容； 然后是排版格式。 </p>
 <p>  一篇好的文章应该看起来舒服（排版好），读起来有味道（内容好）。</p>
 <p>  标记语言的作用是让你在写作的时候，聚焦文章的内容和框架结构， 美观的东西，请交给主题去做。</p>
-<p>  hexo默认支持的就是 markdown， 而markdown是目前接触过最简单的编辑语言，一件事有利必然有弊，由于他过分简单,使其不能适用于一些稍微复杂的渲染，通常这一弊端采用其他的插件来间接解决，这导致markdown看起来似乎有很多方言。</p>
-<p>  开启一片文章： hexo new <title></title></p>
+<p>  hexo默认支持的使用的markdown</p>
+<p>  markdown是目前接触过最简单的编辑语言，一件事有利必然有弊，由于他过分简单，使其不能适用于一些稍微复杂的渲染，通常这一弊端采用其他的插件来间接解决，这导致markdown看起来似乎有很多方言。</p>
 
       
     </div>
@@ -538,7 +550,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">1.</span> <span class="nav-text">hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为啥"><span class="nav-number">2.</span> <span class="nav-text">为啥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行"><span class="nav-number">4.</span> <span class="nav-text">执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创造"><span class="nav-number">5.</span> <span class="nav-text">创造</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">1.</span> <span class="nav-text">hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为啥"><span class="nav-number">2.</span> <span class="nav-text">为啥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行"><span class="nav-number">4.</span> <span class="nav-text">执行</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#发布"><span class="nav-number"></span> <span class="nav-text">发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程"><span class="nav-number">1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创造"><span class="nav-number">2.</span> <span class="nav-text">创造</span></a></li></ol></li></div>
             
 
           </div>
