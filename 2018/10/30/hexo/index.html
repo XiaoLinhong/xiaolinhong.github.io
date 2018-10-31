@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,7 +84,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '6.4.2',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="喃喃自语">
 <meta property="og:description" content="前言hexo是采用JavaScript编写的、基于Node.js的静态网站生成工具，其作用是将使用markdown等标记语言编写的文本文件渲染成HTML文件，并嵌入一个预先设定好静态web架构中。 静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情，静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。 hexo最富盛名的作用是构建个人博客，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-31T12:26:21.203Z">
+<meta property="og:updated_time" content="2018-10-31T14:43:22.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo：入门">
 <meta name="twitter:description" content="前言hexo是采用JavaScript编写的、基于Node.js的静态网站生成工具，其作用是将使用markdown等标记语言编写的文本文件渲染成HTML文件，并嵌入一个预先设定好静态web架构中。 静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情，静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。 hexo最富盛名的作用是构建个人博客，">
@@ -269,9 +269,6 @@
   
 
   
-    
-
-  
 
   
 </nav>
@@ -291,6 +288,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -353,7 +353,7 @@
                 
               
 
-              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：20:26:21" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
+              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：22:43:22" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
             
 
             
@@ -445,7 +445,7 @@
 <li>source： 文章的源文件，用markdown等标记语言编写的文本文件，也就是存文章的地方</li>
 <li>themes： 主题目录</li>
 </ul>
-<p>接着需要配置hexo参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  \_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure></p>
+<p>接着需要配置hexo参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  _config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure></p>
 <p>其中，需要配置的内容包括， 详细配置信息参考<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">这里</a></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">xxx</span>                          <span class="comment"># 站点名称</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">xxx</span>                         <span class="comment"># 博客作者名字</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">xxx</span>                    <span class="comment"># 对站点的描述，搜索引擎会抓取，可以自定义</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CH</span>                     <span class="comment"># 简体中文</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span>             <span class="comment"># 本地时区</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">https://xiaolinhong.github.io/</span> <span class="comment"># 配置主页的URL</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span>                         <span class="comment"># 配置主题，启用next主题，默认使用landscape主题</span></span><br></pre></td></tr></table></figure>
 <p>去找一个喜欢的<a href="https://hexo.io/themes" target="_blank" rel="noopener">主题</a>，如 next</p>
@@ -454,7 +454,7 @@
 <p>注意： 除了init命令外，其他命令均是在folder目录中执行</p>
 <h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>主题这个话题可以先搁置。</p>
 <p>主题也有自己的相关配置，以next为例，在themes/next目录中，存在一个_config.yml文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  themes/next\_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  themes/next_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure>
 <p>其中需要的配置包括主题方案和菜单页面</p>
 <p>主题方案<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure></p>
 <p>菜单页面<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure></p>
@@ -465,11 +465,11 @@
 <p>建议采用github pages部署，github pages仅仅是一个git的仓，看起来没有任何特殊之处，可以使用git命令来打理，也可以使用hexo自带的deploy命令管理。</p>
 <p>使用github pages，需要在github上建一个名称为your_user_name.github.io的仓。</p>
 <p>当然在推送前，需要对仓库有写的权限，请在github上添加服务器的ssh公钥（使用ssh-keygen生成）。</p>
-<p>如果需要使用deploy命令，需要安装额外的扩展。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git <span class="comment"># 安装扩展，安装插件？ 原谅我对nodejs的包管理不熟悉</span></span><br><span class="line">vim \_config.yml   <span class="comment">#  配置有关depoly的参数</span></span><br></pre></td></tr></table></figure></p>
+<p>如果需要使用deploy命令，需要安装额外的扩展。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git <span class="comment"># 安装扩展，安装插件？ 原谅我对nodejs的包管理不熟悉</span></span><br><span class="line">vim _config.yml   <span class="comment">#  配置有关depoly的参数</span></span><br></pre></td></tr></table></figure></p>
 <p>其中 配置的内容包括。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:XiaoLinhong/xiaolinhong.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>搭建好环境之后， 从写文章到网站上看到文章，只需要三步：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;  <span class="comment"># 新建文章，文章会保存在source/\_posts/中</span></span><br><span class="line">vim <span class="built_in">source</span>/\_posts/title.md <span class="comment"># 编写文章，当然也可以用其他编辑器，如Sublime</span></span><br><span class="line">hexo g -d                  <span class="comment"># 渲染并更新部署</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;  <span class="comment"># 新建文章，文章会保存在source/_posts/中</span></span><br><span class="line">vim <span class="built_in">source</span>/_posts/title.md <span class="comment"># 编写文章，当然也可以用其他编辑器，如Sublime</span></span><br><span class="line">hexo g -d                  <span class="comment"># 渲染并更新部署</span></span><br></pre></td></tr></table></figure>
 <p>其中，layout为创建的文档类型，共有三种，包括page、post、draft，post为最常用。</p>
 <p>需注意的是，新建的文章为文本文件，以scaffolds目录中的post.md为模板生成，文章有一些头信息（看起来像是一篇文章的元数据，官网称为Front-matter），可以设定一些变量。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span>  <span class="comment"># 这是标题</span></span><br><span class="line"><span class="attr">tags:</span>   <span class="comment"># 这里写的标签会自动汇集到tags页面上</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">工具</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">category:</span>   <span class="comment"># 这里写的分类会自动汇集到categories页面上，分类可以多级</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">工具</span>      <span class="comment"># 一级分类</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span>      <span class="comment"># 二级分类 </span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">开始写自己的内容</span></span><br></pre></td></tr></table></figure>
@@ -698,7 +698,7 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
@@ -796,6 +796,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
