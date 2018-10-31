@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="知识源于分享">
+<meta name="keywords" content="nginx, bash, js, python">
+<meta property="og:type" content="website">
+<meta property="og:title" content="喃喃自语">
+<meta property="og:url" content="https://xiaolinhong.github.io/index.html">
+<meta property="og:site_name" content="喃喃自语">
+<meta property="og:description" content="知识源于分享">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="喃喃自语">
+<meta name="twitter:description" content="知识源于分享">
+
+
+
+
+
+
+  <link rel="canonical" href="https://xiaolinhong.github.io/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>喃喃自语</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">喃喃自语</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">执迷不悟，亦是一种幸运</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinhong.github.io/2018/10/30/hexo/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="肖林鸿">
+      <meta itemprop="description" content="知识源于分享">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="喃喃自语">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/30/hexo/" itemprop="url">
+                  hexo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：20:01:00" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>hexo是采用JavaScript编写的、基于Node.js的静态网站生成工具，其作用是<strong>将使用markdown等标记语言编写的文本文件渲染成HTML文件</strong>，并嵌入一个预先设定好静态web架构中。</p>
+<p>静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情，静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。</p>
+<p>hexo最富盛名的作用是构建个人博客， 使用博客可以记录和发表感兴趣的东西。 </p>
+<h3 id="动因"><a href="#动因" class="headerlink" title="动因"></a>动因</h3><ul>
+<li>为什么使用博客： 记录，并显摆。</li>
+<li>为什么不使用已经存在博客系统，如简书： 喜欢一切都能自己掌控。</li>
+<li>为什么不使用其他的静态网站生成工具： 静态网站生成工具很多，我的第一选择并不是hexo， 由于熟悉Python的缘故，且对JavaScript没有研究，开始使用的是Nikola，但Nikola界面不好看，所以选择具有众多主题的hexo，大部分的静态网站生成工具用起来感觉都差不多，使用方式雷同，所以挑一个长得好看的。</li>
+</ul>
+<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><ul>
+<li>假设手头有一个linux服务器，我会告诉你AWS可以免费使用一年？ 我会告诉你AWS的服务器在国外？我会告诉你这是一个免费的私有梯子？</li>
+<li>已经有较好的linux基础，熟悉rpm命令</li>
+<li>熟悉github，并有一个账号</li>
+<li>熟悉git</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>hexo是用JavaScript写的一个工具，用Node.js来执行，所以首先需要安装Node.js；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nodejs </span><br><span class="line">sudo npm install -g hexo-cli </span><br></pre></td></tr></table></figure>
+<p>其中，npm是Node.js自带的包管理器，类似rpm、yum、pip等。</p>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>首先需要初始化好一个工作环境。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt; <span class="comment">#  开启一个静态网站生成管理环境，&lt;&gt;表示必要参数</span></span><br></pre></td></tr></table></figure>
+<p>hexo init 会生成名称为folder的目录，主要文件有一下几个</p>
+<ul>
+<li>_config.yml： hexo的配置文件</li>
+<li>node_modules： hexo相关模块（不太懂）</li>
+<li>package.json： 已经安装的插件信息</li>
+<li>scaffolds： 生成文章的模板</li>
+<li>source： 文章的源文件，用markdown等标记语言编写的文本文件，也就是存文章的地方</li>
+<li>themes： 主题目录</li>
+</ul>
+<p>配置hexo的参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  \_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure></p>
+<p>其中，需要配置的内容包括， 详细配置信息参考<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">这里</a></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">xxx</span>                          <span class="comment"># 站点名称</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">xxx</span>                         <span class="comment"># 博客作者名字</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">xxx</span>                    <span class="comment"># 对站点的描述，搜索引擎会抓取，可以自定义</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CH</span>                     <span class="comment"># 简体中文</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span>             <span class="comment"># 本地时区</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">https://xiaolinhong.github.io/</span> <span class="comment"># 配置主页的URL</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span>                         <span class="comment"># 配置主题，启用next主题，默认使用landscape主题</span></span><br></pre></td></tr></table></figure>
+<p>去找一个喜欢的<a href="https://hexo.io/themes" target="_blank" rel="noopener">主题</a>，如 next</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
+<p>生成一个静态网站，目前只有一个默认的介绍post<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g             <span class="comment">#  生成一个静态网站</span></span><br></pre></td></tr></table></figure><br>hexo g 命令会产生一个目录public，<strong>该目录包含了一个静态网站部署所有需要的东西</strong>。</p>
+<p>注意： 除了init命令外，其他命令均是在folder目录中中执行</p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>主题也有自己的相关配置，以next为例，在themes/next目录中，存在一个_config.yml文件，其中需要配置的包括</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  themes/next\_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure>
+<p>主题方案<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure></p>
+<p>设置 菜单<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure></p>
+<p>需要注意的是，除了home和archives菜单，其他菜单的页面需要手动创建，</p>
+<p>如果配置文件变了，需要清理一下原有的网站<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>网站的发布就是将public目录拷贝至web服务器可以到达的地方。 可以自己安装一个Tomcat，Apache等web服务器，也可以托管到其他网站，如github pages。</p>
+<p>建议采用github pages部署，github pages仅仅是一个git的仓，看起来没有任何特殊之处，可以使用git命令来打理，也可以使用hexo自带的deploy命令管理。</p>
+<p>使用github pages，需要在github上建一个名称为your_user_name.github.io的仓。</p>
+<p>当然在推送前，需要对仓库有写的权限，请在github上添加服务器的ssh公钥（使用ssh-keygen生成）。</p>
+<p>如果需要使用deploy命令，需要安装额外的扩展。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git <span class="comment"># 安装扩展，安装插件？ 原谅我对nodejs的包管理不熟悉</span></span><br><span class="line">vim \_config.yml   <span class="comment">#  配置有关depoly的参数</span></span><br></pre></td></tr></table></figure></p>
+<p>其中 配置的内容包括。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:XiaoLinhong/xiaolinhong.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>搭建好环境之后， 从写文章到网站上看到文章，只需要三步：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;  <span class="comment"># 新建文章，文章会保存在source/\_posts/中</span></span><br><span class="line">vim <span class="built_in">source</span>/\_posts/title.md <span class="comment"># 编写文章，当然也可以用其他编辑器，如Sublime</span></span><br><span class="line">hexo g -d                  <span class="comment"># 渲染并更新部署</span></span><br></pre></td></tr></table></figure>
+<p>其中，layout为创建的文档类型，共有三种，包括page、post、draft，post为最常用。</p>
+<p>需注意的是，新建的文章为文本文件，以scaffolds目录中的post.md为模板生成，文章有一些头信息（看起来像是一篇文章的元数据，官网称为Front-matter），可以设定一些变量。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span>  <span class="comment"># 这是标题</span></span><br><span class="line"><span class="attr">tags:</span>   <span class="comment"># 这里写的标签会自动汇集到tags页面上</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">工具</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">category:</span>   <span class="comment"># 这里写的分类会自动汇集到categories页面上，分类可以多级</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">工具</span>      <span class="comment"># 一级分类</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span>      <span class="comment"># 二级分类 </span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">开始写自己的内容</span></span><br></pre></td></tr></table></figure>
+<h2 id="分类和标签"><a href="#分类和标签" class="headerlink" title="分类和标签"></a>分类和标签</h2><p>只有post支持分类和标签，分类具有顺序性和层次性，而标签没有顺序和层次。</p>
+<p>注意标签和标签菜单的区别，标签菜单是主题提供的一个导航页面，标签是文章的元信息，标签菜单页面会使用标签， 没有标签菜单，标签依然可以正常工作</p>
+<h3 id="创造"><a href="#创造" class="headerlink" title="创造"></a>创造</h3><p>之前所有做的事情，只不过是打开了一个word，<strong>只是一个打开，只是一个开始</strong>，真正的工作是不断的写文章。 </p>
+<p>需要写东西的时候，自然而然想到的事情就是打开一个word，往里面写东西就可以了。其实写东西还有很多其他的方法，如markdown， reStructuredText等标记语言。在这里需要理解的是，把思考的东西写出来，并分析给别人这个过程包含了两个事情； 首先是编写内容； 然后是排版格式。 </p>
+<p>一篇好的文章应该看起来舒服（排版好），读起来有味道（内容好）。</p>
+<p>标记语言的作用是让你在写作的时候，聚焦文章的内容和框架结构， 美观的东西，请交给主题去做。</p>
+<p>hexo默认支持的使用的markdown</p>
+<p>markdown是目前接触过最简单的编辑语言。</p>
+<h3 id="一些插件"><a href="#一些插件" class="headerlink" title="一些插件"></a>一些插件</h3><h4 id="标签插件"><a href="#标签插件" class="headerlink" title="标签插件"></a>标签插件</h4><p>一件事有利必然有弊，由于markdown过分简单，使其不能应付一些稍微复杂的渲染，当然可以通过一些插件来间接解决（如标签插件），但导致了markdown看起来似乎有很多方言。</p>
+<p>可以插入代码库、quote、图片、链接等</p>
+<p>如插入一段python代码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_fib</span><span class="params">(maxsize=<span class="number">10</span>)</span>:</span></span><br><span class="line">    <span class="string">''' </span></span><br><span class="line"><span class="string">       a function factory of Fibonacci sequence </span></span><br><span class="line"><span class="string">       caching scheme: FIFO（First In First out）</span></span><br><span class="line"><span class="string">       fib.__closure__</span></span><br><span class="line"><span class="string">       fib.__code__.co_freevars</span></span><br><span class="line"><span class="string">       fib.__closure__[3].cell_contents</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">if</span> maxsize &lt; <span class="number">10</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'maxsize must &gt;= 0 !'</span>)</span><br><span class="line">    queue = []</span><br><span class="line">    cache = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(i)</span>:</span></span><br><span class="line">        <span class="string">''' return the i-th value of Fibonacci sequence '''</span></span><br><span class="line">        <span class="keyword">if</span> i <span class="keyword">in</span> cache:</span><br><span class="line">            queue.append(queue.pop(queue.index(i)))</span><br><span class="line">            <span class="keyword">return</span> cache[i]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> i &lt; <span class="number">0</span>:</span><br><span class="line">               <span class="keyword">raise</span> ValueError(<span class="string">'i must &gt;= 0 !'</span>)</span><br><span class="line">            <span class="keyword">if</span> i &lt; <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cache[i] = fib(i<span class="number">-1</span>) + fib(i<span class="number">-2</span>)</span><br><span class="line">                queue.append(i)</span><br><span class="line">                <span class="keyword">if</span> len(queue) &gt; maxsize:</span><br><span class="line">                    old = queue.pop(<span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">del</span> cache[old]</span><br><span class="line">                <span class="keyword">return</span> cache[i]</span><br><span class="line">    <span class="keyword">return</span> fib</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">肖林鸿</p>
+              <p class="site-description motion-element" itemprop="description">知识源于分享</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/XiaoLinhong" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">肖林鸿</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
