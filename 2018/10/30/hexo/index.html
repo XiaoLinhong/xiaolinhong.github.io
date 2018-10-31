@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-CN">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,7 +84,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Muse',
     version: '6.4.2',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="喃喃自语">
 <meta property="og:description" content="前言hexo是采用JavaScript编写的、基于Node.js的静态网站生成工具，其作用是将使用markdown等标记语言编写的文本文件渲染成HTML文件，并嵌入一个预先设定好静态web架构中。 静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情，静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。 hexo最富盛名的作用是构建个人博客，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-31T14:43:22.713Z">
+<meta property="og:updated_time" content="2018-10-31T14:48:25.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo：入门">
 <meta name="twitter:description" content="前言hexo是采用JavaScript编写的、基于Node.js的静态网站生成工具，其作用是将使用markdown等标记语言编写的文本文件渲染成HTML文件，并嵌入一个预先设定好静态web架构中。 静态网站均是内容至上，并不表示无聊， 网站也可以有动画，可以用CSS3/HTML5做很多有趣的事情，静态的意思仅仅是HTML无需动态生成，且没法进行用户数据采集。 hexo最富盛名的作用是构建个人博客，">
@@ -269,6 +269,9 @@
   
 
   
+    
+
+  
 
   
 </nav>
@@ -288,9 +291,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-            
-
           
           <div id="content" class="content">
             
@@ -353,7 +353,7 @@
                 
               
 
-              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：22:43:22" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
+              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：22:48:25" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
             
 
             
@@ -454,7 +454,7 @@
 <p>注意： 除了init命令外，其他命令均是在folder目录中执行</p>
 <h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>主题这个话题可以先搁置。</p>
 <p>主题也有自己的相关配置，以next为例，在themes/next目录中，存在一个_config.yml文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  themes/next_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  themes/next/_config.yml  <span class="comment">#  配置hexo的参数文件</span></span><br></pre></td></tr></table></figure>
 <p>其中需要的配置包括主题方案和菜单页面</p>
 <p>主题方案<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure></p>
 <p>菜单页面<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure></p>
@@ -698,7 +698,7 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.4.2</div>
 
 
 
@@ -798,13 +798,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
