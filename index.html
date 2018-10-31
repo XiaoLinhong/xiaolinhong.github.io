@@ -357,7 +357,7 @@
                 
               
 
-              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：18:51:59" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
+              <time title="创建时间：2018-10-31 06:01:21 / 修改时间：18:57:17" itemprop="dateCreated datePublished" datetime="2018-10-31T06:01:21+08:00">2018-10-31</time>
             
 
             
@@ -445,7 +445,7 @@
 <p>使用github pages，需要在github上建一个名称为your_user_name.github.io的仓。</p>
 <p>当然在推送前，需要对仓库有写的权限，请在github上添加服务器的ssh公钥（使用ssh-keygen生成）。</p>
 <p>如果需要使用deploy命令，需要安装额外的扩展。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git <span class="comment"># 安装扩展，安装插件？ 原谅我对nodejs的包管理不熟悉</span></span><br><span class="line">vim _config.yml   <span class="comment">#  配置有关depoly的参数</span></span><br></pre></td></tr></table></figure></p>
-<p>其中 配置的内容包括。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:XiaoLinhong/xiaolinhong.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
+<p>其中 配置的内容包括。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:XiaoLinhong/xiaolinhong.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>搭建好环境之后， 从写文章靠网站上看到文章，只需要三步：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;  <span class="comment"># 新建文章，文章会保存在source/_posts/中</span></span><br><span class="line">vim <span class="built_in">source</span>/_posts/title.md <span class="comment"># 编写文章，当然也可以用其他编辑器，如Sublime</span></span><br><span class="line">hexo g -d                  <span class="comment"># 生成并部署</span></span><br></pre></td></tr></table></figure>
 <p>其中，layout为创建的文档类型，共有三种，包括page、post、draft，post为最常用。</p>
