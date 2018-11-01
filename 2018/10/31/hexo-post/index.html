@@ -121,7 +121,7 @@
 <meta property="og:description" content="前言hexo写文章时，需要了解三样工具，包括markdown、标签插件和MathJax，其中标签插件是对markdown语法的扩展,MathJax则是用来编写数学公式。 markdownmarkdown 一种简单、易读的纯文本标记语言，纯文本文件本身没有格式的概念，而标记语言为纯文本文件的渲染提供可能。 文本编译涉及两件事：   专注内容的编写（普通的文本文件）； 内容格式的编排（复杂的word和">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xiaolinhong.github.io/2018/10/31/hexo-post/test.jpg">
-<meta property="og:updated_time" content="2018-11-01T07:40:53.320Z">
+<meta property="og:updated_time" content="2018-11-01T07:45:05.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo: post">
 <meta name="twitter:description" content="前言hexo写文章时，需要了解三样工具，包括markdown、标签插件和MathJax，其中标签插件是对markdown语法的扩展,MathJax则是用来编写数学公式。 markdownmarkdown 一种简单、易读的纯文本标记语言，纯文本文件本身没有格式的概念，而标记语言为纯文本文件的渲染提供可能。 文本编译涉及两件事：   专注内容的编写（普通的文本文件）； 内容格式的编排（复杂的word和">
@@ -361,7 +361,7 @@
                 
               
 
-              <time title="创建时间：2018-11-01 06:14:24 / 修改时间：15:40:53" itemprop="dateCreated datePublished" datetime="2018-11-01T06:14:24+08:00">2018-11-01</time>
+              <time title="创建时间：2018-11-01 06:14:24 / 修改时间：15:45:05" itemprop="dateCreated datePublished" datetime="2018-11-01T06:14:24+08:00">2018-11-01</time>
             
 
             
@@ -504,11 +504,12 @@
 <p>使用资源文件夹后，引用图片可以采用相对路径，更加便利<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] example.jpg [width] [height] [title text [alt text]] %&#125; # 改变前</span><br><span class="line">&#123;% asset_img example.jpg This is an example image %&#125; # 改编后</span><br></pre></td></tr></table></figure></p>
 <img src="/2018/10/31/hexo-post/test.jpg" title="例子">
 <h3 id="插入公式"><a href="#插入公式" class="headerlink" title="插入公式"></a>插入公式</h3><p>在浏览器中插入公式，可以使用<a href="https://www.mathjax.org/" target="_blank" rel="noopener">mathjax</a>引擎</p>
-<p>一些例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$$\alpha \gamma \epsilon \eta \iota \lambda$$</span><br><span class="line"></span><br><span class="line">$$\frac&#123;1&#125;&#123;2&#125;$$</span><br><span class="line"></span><br><span class="line">$$\sum_&#123;i=0&#125;^N\int_&#123;a&#125;^&#123;b&#125;g(t,i)\text&#123;d&#125;t$$</span><br><span class="line"></span><br><span class="line">$$\begin&#123;cases&#125;</span><br><span class="line">a_1x+b_1y+c_1z=d_1\\</span><br><span class="line">a_2x+b_2y+c_2z=d_2\\</span><br><span class="line">a_3x+b_3y+c_3z=d_3\\</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure></p>
+<p>一些例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$$\alpha \gamma \epsilon \eta \iota \lambda$$</span><br><span class="line"></span><br><span class="line">$$\frac&#123;1&#125;&#123;2&#125;$$</span><br><span class="line"></span><br><span class="line">$$\sum_&#123;i=0&#125;^N\int_&#123;a&#125;^&#123;b&#125;g(t,i)\text&#123;d&#125;t$$</span><br><span class="line"></span><br><span class="line">$$\begin&#123;cases&#125;</span><br><span class="line">a_1x+b_1y+c_1z=d_1\\</span><br><span class="line"></span><br><span class="line">a_2x+b_2y+c_2z=d_2\\</span><br><span class="line">a_3x+b_3y+c_3z=d_3\\</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure></p>
 <p>$$\alpha \gamma \epsilon \eta \iota \lambda$$</p>
 <p>$$\frac{1}{2}$$</p>
 <p>$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$</p>
-<p>$$\begin{cases}<br>a_1x+b_1y+c_1z=d_1\<br>a_2x+b_2y+c_2z=d_2\<br>a_3x+b_3y+c_3z=d_3\<br>\end{cases}<br>$$</p>
+<p>$$\begin{cases}<br>a_1x+b_1y+c_1z=d_1</p>
+<p>a_2x+b_2y+c_2z=d_2\<br>a_3x+b_3y+c_3z=d_3\<br>\end{cases}<br>$$</p>
 
       
     </div>
