@@ -112,27 +112,25 @@
 
 
 
-  <meta name="description" content="前言hexo写文章时，需要了解三样工具，包括markdown、标签插件和MathJax，其中标签插件是对markdown语法的扩展,MathJax则是用来编写数学公式。 markdownmarkdown 一种简单、易读的纯文本标记语言，纯文本文件本身没有格式的概念，而标记语言为纯文本文件的渲染提供可能。 文本编译涉及两件事：   专注内容的编写（普通的文本文件）； 内容格式的编排（复杂的word和">
-<meta name="keywords" content="hexo,markdown">
+  <meta name="description" content="前言从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。 端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，">
+<meta name="keywords" content="网络隧道">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo: post">
-<meta property="og:url" content="https://xiaolinhong.github.io/2018/10/31/hexo-post/index.html">
+<meta property="og:title" content="网络隧道">
+<meta property="og:url" content="https://xiaolinhong.github.io/2018/11/02/Tunnelling/index.html">
 <meta property="og:site_name" content="喃喃自语">
-<meta property="og:description" content="前言hexo写文章时，需要了解三样工具，包括markdown、标签插件和MathJax，其中标签插件是对markdown语法的扩展,MathJax则是用来编写数学公式。 markdownmarkdown 一种简单、易读的纯文本标记语言，纯文本文件本身没有格式的概念，而标记语言为纯文本文件的渲染提供可能。 文本编译涉及两件事：   专注内容的编写（普通的文本文件）； 内容格式的编排（复杂的word和">
+<meta property="og:description" content="前言从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。 端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://xiaolinhong.github.io/2018/10/31/hexo-post/test.jpg">
-<meta property="og:updated_time" content="2018-11-01T08:31:04.464Z">
+<meta property="og:updated_time" content="2018-11-02T15:27:21.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo: post">
-<meta name="twitter:description" content="前言hexo写文章时，需要了解三样工具，包括markdown、标签插件和MathJax，其中标签插件是对markdown语法的扩展,MathJax则是用来编写数学公式。 markdownmarkdown 一种简单、易读的纯文本标记语言，纯文本文件本身没有格式的概念，而标记语言为纯文本文件的渲染提供可能。 文本编译涉及两件事：   专注内容的编写（普通的文本文件）； 内容格式的编排（复杂的word和">
-<meta name="twitter:image" content="https://xiaolinhong.github.io/2018/10/31/hexo-post/test.jpg">
+<meta name="twitter:title" content="网络隧道">
+<meta name="twitter:description" content="前言从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。 端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，">
 
 
 
 
 
 
-  <link rel="canonical" href="https://xiaolinhong.github.io/2018/10/31/hexo-post/">
+  <link rel="canonical" href="https://xiaolinhong.github.io/2018/11/02/Tunnelling/">
 
 
 
@@ -142,7 +140,7 @@
   };
 </script>
 
-  <title>hexo: post | 喃喃自语</title>
+  <title>网络隧道 | 喃喃自语</title>
   
 
 
@@ -319,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinhong.github.io/2018/10/31/hexo-post/">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinhong.github.io/2018/11/02/Tunnelling/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="肖林鸿">
@@ -336,7 +334,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">hexo: post
+          <h2 class="post-title" itemprop="name headline">网络隧道
               
             
           </h2>
@@ -361,7 +359,7 @@
                 
               
 
-              <time title="创建时间：2018-11-01 06:14:24 / 修改时间：16:31:04" itemprop="dateCreated datePublished" datetime="2018-11-01T06:14:24+08:00">2018-11-01</time>
+              <time title="创建时间：2018-11-02 14:55:00 / 修改时间：23:27:21" itemprop="dateCreated datePublished" datetime="2018-11-02T14:55:00+08:00">2018-11-02</time>
             
 
             
@@ -390,14 +388,7 @@
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/hexo/markdown/" itemprop="url" rel="index"><span itemprop="name">markdown</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/网络隧道/" itemprop="url" rel="index"><span itemprop="name">网络隧道</span></a></span>
 
                 
                 
@@ -412,8 +403,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/31/hexo-post/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/10/31/hexo-post/" itemprop="commentCount"></span>
+                <a href="/2018/11/02/Tunnelling/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/02/Tunnelling/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -421,7 +412,7 @@
 
           
           
-             <span id="/2018/10/31/hexo-post/" class="leancloud_visitors" data-flag-title="hexo: post">
+             <span id="/2018/11/02/Tunnelling/" class="leancloud_visitors" data-flag-title="网络隧道">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -446,7 +437,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">547</span>
               
 
               
@@ -480,42 +471,28 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>hexo写文章时，需要了解三样工具，包括markdown、标签插件和MathJax，其中标签插件是对markdown语法的扩展,MathJax则是用来编写数学公式。</p>
-<h3 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h3><p>markdown 一种简单、易读的纯文本标记语言，纯文本文件本身没有格式的概念，而标记语言为纯文本文件的渲染提供可能。</p>
-<p>文本编译涉及两件事： </p>
-<ul>
-<li>专注内容的编写（普通的文本文件）；</li>
-<li>内容格式的编排（复杂的word和HTML）；</li>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。<br>一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。<br>SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。</p>
+<p>端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，还会提供额外的加密服务，这一过程也被成为隧道（Tunneling）。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><ul>
+<li>加密其他协议的通信</li>
+<li>完成一些其他协议无法建立的TCP链接</li>
 </ul>
-<p>markdown的出现是帮助我们在专注内容的编写的同时，简单地标记一下格式。</p>
-<ul>
-<li>标记异常简单；</li>
-<li>未被渲染之前，亦可阅读；</li>
-<li>容易转化成其它存储格式；</li>
-</ul>
-<p>markdown的语法主要包括标题、列表、引用、字体（斜体或者粗体）、链接、代码块等。</p>
-<h4 id="表题"><a href="#表题" class="headerlink" title="表题"></a>表题</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#</span></span><br><span class="line"><span class="section">##</span></span><br><span class="line"><span class="section">###</span></span><br></pre></td></tr></table></figure>
-<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">*</span><br><span class="line"><span class="bullet">1. </span></span><br><span class="line"><span class="bullet">2. </span></span><br></pre></td></tr></table></figure>
-<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><figure class="highlight yaml"><figcaption><span>hexo/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[链接](https://xiaolinhong.github.io/)</span> <span class="comment"># 链接</span></span><br><span class="line"><span class="string">![](/images/image.jpg)</span>                 <span class="comment"># 图片，图片保存在source/images中</span></span><br></pre></td></tr></table></figure>
-<p>字体<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br><span class="line"><span class="strong">**粗体**</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="插入特殊块"><a href="#插入特殊块" class="headerlink" title="插入特殊块"></a>插入特殊块</h3><p>标签插件的存在为markdown提供了额外的语法特性，标签插件和多数模板引擎的语法相似。 当然标签插件一些功能与markdown重复，建议使用标签插件的语法。</p>
-<ul>
-<li>blockquote  # 引用</li>
-<li>codeblock   # 代码块</li>
-<li>img         # 图片</li>
-<li>link        # 链接</li>
-</ul>
-<p>如blockquote的用法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="资源文件夹"><a href="#资源文件夹" class="headerlink" title="资源文件夹"></a>资源文件夹</h3><p>资源文件夹允许每篇文章自带私有文件夹，用来存放图片之类的文件，便于管理。</p>
-<p>使用资源文件夹需要对hexo进行配置<br><figure class="highlight yaml"><figcaption><span>hexo/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p>使用资源文件夹后，引用图片可以采用相对路径，更加便利<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] example.jpg [width] [height] [title text [alt text]] %&#125; # 改变前</span><br><span class="line">&#123;% asset_img example.jpg This is an example image %&#125; # 改编后</span><br></pre></td></tr></table></figure></p>
-<img src="/2018/10/31/hexo-post/test.jpg" title="例子">
-<h3 id="插入公式"><a href="#插入公式" class="headerlink" title="插入公式"></a>插入公式</h3><p>在浏览器中插入公式，可以使用<a href="https://www.mathjax.org/" target="_blank" rel="noopener">mathjax</a>引擎</p>
-<p>一些例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$$\alpha \gamma \epsilon \eta \iota \lambda$$</span><br><span class="line"></span><br><span class="line">$$\frac&#123;1&#125;&#123;2&#125;$$</span><br><span class="line"></span><br><span class="line">$$\sum_&#123;i=0&#125;^N\int_&#123;a&#125;^&#123;b&#125;g(t,i)\text&#123;d&#125;t$$</span><br><span class="line"></span><br><span class="line">$$\begin&#123;cases&#125;</span><br><span class="line">a_1x+b_1y+c_1z=d_1\\</span><br><span class="line">a_2x+b_2y+c_2z=d_2\\</span><br><span class="line">a_3x+b_3y+c_3z=d_3\\</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure></p>
-<p>$$\alpha \gamma \epsilon \eta \iota \lambda$$</p>
-<p>$$\frac{1}{2}$$</p>
-<p>$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$</p>
-<p>$$\begin{cases}<br>a_1x+b_1y+c_1z=d_1\<br>a_2x+b_2y+c_2z=d_2\<br>a_3x+b_3y+c_3z=d_3\<br>\end{cases}<br>$$</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>端口转发</p>
+<p>ssh -L 8080:localhost:8888 203.23.41.5</p>
+<p>将远程服务器（203.23.41.5）的8888端口服务，直接绑定在本地的8080端口上。</p>
+<p>pqsql -P 8080 …直接在本地登录服务器上的数据库服务。</p>
+<p>本地sshd会监听的数据库务端口8080</p>
+<ol>
+<li><p>当数据库客服端去请求8080的服务时，本地的ssh服务会接到相关监听</p>
+</li>
+<li><p>ssh客户程序会将该请求 转发给 远程服务器</p>
+</li>
+<li><p>远程服务器收到请求之后，会执行该请求</p>
+</li>
+<li><p>请求完成的数据，又返回去</p>
+</li>
+</ol>
+<p>默认的情况ssh绑定的是shell的服务（22端口，指向shell?）</p>
 
       
     </div>
@@ -536,9 +513,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"> <i class="fa fa-tag"></i> hexo</a>
-          
-            <a href="/tags/markdown/" rel="tag"> <i class="fa fa-tag"></i> markdown</a>
+            <a href="/tags/网络隧道/" rel="tag"> <i class="fa fa-tag"></i> 网络隧道</a>
           
         </div>
       
@@ -551,8 +526,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/31/hexo-next/" rel="next" title="hexo: next">
-                <i class="fa fa-chevron-left"></i> hexo: next
+              <a href="/2018/10/31/hexo-post/" rel="next" title="hexo: post">
+                <i class="fa fa-chevron-left"></i> hexo: post
               </a>
             
           </div>
@@ -560,10 +535,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/02/Tunnelling/" rel="prev" title="网络隧道">
-                网络隧道 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -725,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown"><span class="nav-text">markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表题"><span class="nav-text">表题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表"><span class="nav-text">列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接"><span class="nav-text">链接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入特殊块"><span class="nav-text">插入特殊块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源文件夹"><span class="nav-text">资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入公式"><span class="nav-text">插入公式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></div>
             
 
           </div>
@@ -958,30 +929,6 @@
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      },
-      TeX: {equationNumbers: { autoNumber: "AMS" }}
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
