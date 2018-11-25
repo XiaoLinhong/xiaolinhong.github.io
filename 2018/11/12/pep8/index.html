@@ -112,25 +112,25 @@
 
 
 
-  <meta name="description" content="前言从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。 端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，">
-<meta name="keywords" content="网络隧道">
+  <meta name="description" content="引言PEP 8 给出了python主要内置标准库的代码编码规范，每个项目，或者团队亦可使用自己的编码风格，只需要保持编码风格的一致即可。 动因代码的阅读比编写更加频繁，保持一致的编码风格可以增强代码的可读性，当然规范并不是时时刻刻都需要遵循的，出现两难情况，如保持代码的兼容性，可以不遵循编码风格。 出现以下几种情况时，可忽略特定的规则：  但遵循规则，可读性变差 与历史代码保持一致 历史代码 兼容">
+<meta name="keywords" content="python,PEP8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络隧道">
-<meta property="og:url" content="https://xiaolinhong.github.io/2018/11/02/Tunnelling/index.html">
+<meta property="og:title" content="PEP 8">
+<meta property="og:url" content="https://xiaolinhong.github.io/2018/11/12/pep8/index.html">
 <meta property="og:site_name" content="喃喃自语">
-<meta property="og:description" content="前言从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。 端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，">
+<meta property="og:description" content="引言PEP 8 给出了python主要内置标准库的代码编码规范，每个项目，或者团队亦可使用自己的编码风格，只需要保持编码风格的一致即可。 动因代码的阅读比编写更加频繁，保持一致的编码风格可以增强代码的可读性，当然规范并不是时时刻刻都需要遵循的，出现两难情况，如保持代码的兼容性，可以不遵循编码风格。 出现以下几种情况时，可忽略特定的规则：  但遵循规则，可读性变差 与历史代码保持一致 历史代码 兼容">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-02T15:27:21.513Z">
+<meta property="og:updated_time" content="2018-11-13T06:44:07.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网络隧道">
-<meta name="twitter:description" content="前言从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。 端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，">
+<meta name="twitter:title" content="PEP 8">
+<meta name="twitter:description" content="引言PEP 8 给出了python主要内置标准库的代码编码规范，每个项目，或者团队亦可使用自己的编码风格，只需要保持编码风格的一致即可。 动因代码的阅读比编写更加频繁，保持一致的编码风格可以增强代码的可读性，当然规范并不是时时刻刻都需要遵循的，出现两难情况，如保持代码的兼容性，可以不遵循编码风格。 出现以下几种情况时，可忽略特定的规则：  但遵循规则，可读性变差 与历史代码保持一致 历史代码 兼容">
 
 
 
 
 
 
-  <link rel="canonical" href="https://xiaolinhong.github.io/2018/11/02/Tunnelling/">
+  <link rel="canonical" href="https://xiaolinhong.github.io/2018/11/12/pep8/">
 
 
 
@@ -140,7 +140,7 @@
   };
 </script>
 
-  <title>网络隧道 | 喃喃自语</title>
+  <title>PEP 8 | 喃喃自语</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinhong.github.io/2018/11/02/Tunnelling/">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinhong.github.io/2018/11/12/pep8/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="肖林鸿">
@@ -334,7 +334,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">网络隧道
+          <h2 class="post-title" itemprop="name headline">PEP 8
               
             
           </h2>
@@ -359,7 +359,7 @@
                 
               
 
-              <time title="创建时间：2018-11-02 14:55:00 / 修改时间：23:27:21" itemprop="dateCreated datePublished" datetime="2018-11-02T14:55:00+08:00">2018-11-02</time>
+              <time title="创建时间：2018-11-13 02:04:55 / 修改时间：14:44:07" itemprop="dateCreated datePublished" datetime="2018-11-13T02:04:55+08:00">2018-11-13</time>
             
 
             
@@ -381,14 +381,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/网络隧道/" itemprop="url" rel="index"><span itemprop="name">网络隧道</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/PEP8/" itemprop="url" rel="index"><span itemprop="name">PEP8</span></a></span>
 
                 
                 
@@ -403,8 +403,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/02/Tunnelling/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/02/Tunnelling/" itemprop="commentCount"></span>
+                <a href="/2018/11/12/pep8/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/12/pep8/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,7 +412,7 @@
 
           
           
-             <span id="/2018/11/02/Tunnelling/" class="leancloud_visitors" data-flag-title="网络隧道">
+             <span id="/2018/11/12/pep8/" class="leancloud_visitors" data-flag-title="PEP 8">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -437,7 +437,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">547</span>
+                <span title="本文字数">661</span>
               
 
               
@@ -471,28 +471,39 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>从外部网络登录到局域网中的某台计算机(服务器)，常用的手段是用vpn，看起来不那么专业的手段有QQ远程，或者Teamview。<br>一种看起来更为高端的手段就是利用具有公网ip的服务器，建立一个网络隧道，或叫端口转化。<br>SSH提供远程登陆的一种方式，同时，所有传输的数据都是加密过的，SSH还提供了一种端口转化的功能。</p>
-<p>端口转化： 可以将其他的协议（基于TCP）的传输数据，通过SSH转发，在转发的时候，还会提供额外的加密服务，这一过程也被成为隧道（Tunneling）。</p>
-<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><ul>
-<li>加密其他协议的通信</li>
-<li>完成一些其他协议无法建立的TCP链接</li>
-</ul>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>端口转发</p>
-<p>ssh -L 8080:localhost:8888 203.23.41.5</p>
-<p>将远程服务器（203.23.41.5）的8888端口服务，直接绑定在本地的8080端口上。</p>
-<p>pqsql -P 8080 …直接在本地登录服务器上的数据库服务。</p>
-<p>本地sshd会监听的数据库务端口8080</p>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>PEP 8 给出了python主要内置标准库的代码编码规范，每个项目，或者团队亦可使用自己的编码风格，只需要保持编码风格的一致即可。</p>
+<h2 id="动因"><a href="#动因" class="headerlink" title="动因"></a>动因</h2><p>代码的阅读比编写更加频繁，保持一致的编码风格可以增强代码的可读性，当然规范并不是时时刻刻都需要遵循的，出现两难情况，如保持代码的兼容性，可以不遵循编码风格。</p>
+<p>出现以下几种情况时，可忽略特定的规则：</p>
 <ol>
-<li><p>当数据库客服端去请求8080的服务时，本地的ssh服务会接到相关监听</p>
-</li>
-<li><p>ssh客户程序会将该请求 转发给 远程服务器</p>
-</li>
-<li><p>远程服务器收到请求之后，会执行该请求</p>
-</li>
-<li><p>请求完成的数据，又返回去</p>
-</li>
+<li>但遵循规则，可读性变差</li>
+<li>与历史代码保持一致</li>
+<li>历史代码</li>
+<li>兼容性问题</li>
 </ol>
-<p>默认的情况ssh绑定的是shell的服务（22端口，指向shell?）</p>
+<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><ol>
+<li>缩进 <strong>4个空格</strong></li>
+<li>换行 <strong>尽量避免</strong>， 无法避免，请使用隐式换行，并保持对齐</li>
+<li>长度 <strong>80</strong></li>
+<li>空行 顶层函数和类的定义，前后用两个空行隔开，类里的方法定义用一个空行隔开。</li>
+<li>编码 <strong>UTF-8</strong></li>
+<li><p>导入 <strong>分行导入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">标准库导入</span><br><span class="line"></span><br><span class="line">相关第三方库导入</span><br><span class="line"></span><br><span class="line">本地应用/库特定导入</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>空格 <strong>不要使用多余空格</strong></p>
+</li>
+<li>注释 <strong>注释应该是完整的句子</strong></li>
+</ol>
+<h2 id="文档字符串"><a href="#文档字符串" class="headerlink" title="文档字符串"></a>文档字符串</h2><p>所有的公共模块，函数，类以及方法都需要编写文档说明。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''Return a foobang</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Optional plotz says to frobnicate the bizbaz first.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h2><p><strong>那些暴露给用户的API接口的命名，应该遵循反映使用场景而不是实现的原则。</strong></p>
+<ul>
+<li>模块应该使用简短全小写的名字，<strong>如果为了提升可读性，下划线也是可以用的</strong></li>
+<li>包名应该使用简短全小写的名字，<strong>但不建议用下划线</strong></li>
+<li>C/C++模块需要一个下划线前缀（例如：_socket）</li>
+<li>类名一般使用首字母大写的约定。 </li>
+<li>函数名应该小写，如果想提高可读性可以用下划线分隔。 </li>
+<li>常量使用全部大写的方式</li>
+</ul>
 
       
     </div>
@@ -513,7 +524,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/网络隧道/" rel="tag"> <i class="fa fa-tag"></i> 网络隧道</a>
+            <a href="/tags/python/" rel="tag"> <i class="fa fa-tag"></i> python</a>
+          
+            <a href="/tags/PEP8/" rel="tag"> <i class="fa fa-tag"></i> PEP8</a>
           
         </div>
       
@@ -526,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/31/hexo-post/" rel="next" title="hexo: post">
-                <i class="fa fa-chevron-left"></i> hexo: post
+              <a href="/2018/11/12/pylint/" rel="next" title="pylint">
+                <i class="fa fa-chevron-left"></i> pylint
               </a>
             
           </div>
@@ -536,8 +549,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/08/sphinx/" rel="prev" title="sphinx: 入门">
-                sphinx: 入门 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/12/engilish-01/" rel="prev" title="engilish-01">
+                engilish-01 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -712,7 +725,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动因"><span class="nav-text">动因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#规范"><span class="nav-text">规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档字符串"><span class="nav-text">文档字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名规范"><span class="nav-text">命名规范</span></a></li></ol></div>
             
 
           </div>
