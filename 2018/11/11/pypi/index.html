@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="喃喃自语">
 <meta property="og:description" content="前言在进行编码之前，思考程序的潜在用户有哪些，他们会在什么环境下使用，能够避免不少麻烦。 python有众多的打包技术，熟悉他们，并选择最合适的一个。 思考部署包的存在是为了被安装，在打包之前，应该回答几个关于部署的问题。  用户是谁？ 其他的开发人员，还是直接的使用者； 该软件是独立的吗？ 还是只是一个大型项目的一部分； 程序运行在什么环境？ 服务器，桌面系统，移动端，或者嵌入式设备；  pyt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-13T06:45:33.587Z">
+<meta property="og:updated_time" content="2018-11-25T08:35:52.375Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pypi">
 <meta name="twitter:description" content="前言在进行编码之前，思考程序的潜在用户有哪些，他们会在什么环境下使用，能够避免不少麻烦。 python有众多的打包技术，熟悉他们，并选择最合适的一个。 思考部署包的存在是为了被安装，在打包之前，应该回答几个关于部署的问题。  用户是谁？ 其他的开发人员，还是直接的使用者； 该软件是独立的吗？ 还是只是一个大型项目的一部分； 程序运行在什么环境？ 服务器，桌面系统，移动端，或者嵌入式设备；  pyt">
@@ -376,7 +376,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-13 14:45:33" itemprop="dateModified" datetime="2018-11-13T14:45:33+08:00">2018-11-13</time>
+                <time title="修改时间：2018-11-25 16:35:52" itemprop="dateModified" datetime="2018-11-25T16:35:52+08:00">2018-11-25</time>
               
             
           </span>
@@ -442,7 +442,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">901</span>
+                <span title="本文字数">3.6k</span>
               
 
               
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -486,18 +486,14 @@
 </ul>
 <h2 id="python模块"><a href="#python模块" class="headerlink" title="python模块"></a>python模块</h2><p>  只是一个文件，拷贝即可</p>
 <h2 id="源码发布"><a href="#源码发布" class="headerlink" title="源码发布"></a>源码发布</h2><p>  如果不依赖其他第三方的库，且是纯的python程序，只需压缩归档，拷贝即可</p>
-<h2 id="二进制发布"><a href="#二进制发布" class="headerlink" title="二进制发布"></a>二进制发布</h2><p>  依赖非python第三方库，可用wheel，当然Wheel是一个标准工具，对其他的python程序也适用</p>
+<h2 id="二进制发布"><a href="#二进制发布" class="headerlink" title="二进制发布"></a>二进制发布</h2><p>  依赖非python第三方库，可用wheel，当然wheel是一个标准工具，对其他的python程序也适用</p>
 <blockquote>
 <p>Wheels are a pre-built distribution format</p>
 </blockquote>
-<h2 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h2><p>pip install -e <path><br>pip install ./downloads/SomeProject-1.0.4.tar.gz</path></p>
-<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>python -m pip install twine</p>
-<p>python setup.py sdist bdist_wheel</p>
-<p>python -m twine upload –repository-url <a href="https://upload.pypi.org/legacy/" target="_blank" rel="noopener">https://upload.pypi.org/legacy/</a> dist/*</p>
-<p><strong>每次更新之后再提交时，需要增加版本号</strong></p>
-<p>[distutils]<br>index-servers=<br>    pypi<br>    testpypi</p>
-<p>[testpypi]<br>repository: <a href="https://upload.pypi.org/legacy/" target="_blank" rel="noopener">https://upload.pypi.org/legacy/</a><br>username: Linhong<br>password: <strong>***</strong></p>
-<p>HTTPError: 400 Client Error: This filename has already been used, use a different version. See <a href="https://pypi.org/help/#file-name-reuse" target="_blank" rel="noopener">https://pypi.org/help/#file-name-reuse</a> for url: <a href="https://upload.pypi.org/legacy/" target="_blank" rel="noopener">https://upload.pypi.org/legacy/</a></p>
+<h2 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install -e &lt;path&gt;</span><br><span class="line">pip install ./downloads/SomeProject-1.0.4.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>发布一般是把本地的python代码，安装一定的格式，推送到PyPI上面，所以首先需要在PyPi注册一个账号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install twine <span class="comment"># 安装支持库</span></span><br><span class="line">python setup.py sdist bdist_wheel <span class="comment"># 编译本地的python，生成wheel文件</span></span><br><span class="line">python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/* <span class="comment"># 推送</span></span><br><span class="line">``` bash</span><br><span class="line"></span><br><span class="line">注意： **每次更新之后再提交时，需要在setup.py中增加版本号**</span><br><span class="line"></span><br><span class="line">整个发布的最大难点在于写setup.py文件，建议可以参考pip模块的setup.py写法</span><br><span class="line"></span><br><span class="line">``` python</span><br><span class="line"></span><br><span class="line">import codecs</span><br><span class="line">import os</span><br><span class="line">import re</span><br><span class="line">import sys</span><br><span class="line"></span><br><span class="line">from setuptools import find_packages, setup</span><br><span class="line"></span><br><span class="line">here = os.path.abspath(os.path.dirname(__file__))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def <span class="built_in">read</span>(*parts):</span><br><span class="line">    <span class="comment"># intentionally *not* adding an encoding option to open, See:</span></span><br><span class="line">    <span class="comment">#   https://github.com/pypa/virtualenv/issues/201#issuecomment-3145690</span></span><br><span class="line">    with codecs.open(os.path.join(here, *parts), <span class="string">'r'</span>) as fp:</span><br><span class="line">        <span class="built_in">return</span> fp.read()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def find_version(*file_paths):</span><br><span class="line">    version_file = <span class="built_in">read</span>(*file_paths)</span><br><span class="line">    version_match = re.search(</span><br><span class="line">        r<span class="string">"^__version__ = ['\"]([^'\"]*)['\"]"</span>,</span><br><span class="line">        version_file,</span><br><span class="line">        re.M,</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">if</span> version_match:</span><br><span class="line">        <span class="built_in">return</span> version_match.group(1)</span><br><span class="line"></span><br><span class="line">    raise RuntimeError(<span class="string">"Unable to find version string."</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">long_description = <span class="built_in">read</span>(<span class="string">'README.rst'</span>)</span><br><span class="line"></span><br><span class="line">setup( <span class="comment"># 这里的是重点</span></span><br><span class="line">    name=<span class="string">"pip"</span>,</span><br><span class="line">    version=find_version(<span class="string">"src"</span>, <span class="string">"pip"</span>, <span class="string">"__init__.py"</span>),</span><br><span class="line">    description=<span class="string">"The PyPA recommended tool for installing Python packages."</span>,</span><br><span class="line">    long_description=long_description,</span><br><span class="line"></span><br><span class="line">    license=<span class="string">'MIT'</span>,</span><br><span class="line">    classifiers=[</span><br><span class="line">        <span class="string">"Development Status :: 5 - Production/Stable"</span>,</span><br><span class="line">        <span class="string">"Intended Audience :: Developers"</span>,</span><br><span class="line">        <span class="string">"License :: OSI Approved :: MIT License"</span>,</span><br><span class="line">        <span class="string">"Topic :: Software Development :: Build Tools"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 2"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 2.7"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3.4"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3.5"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3.6"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3.7"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: Implementation :: CPython"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: Implementation :: PyPy"</span>,</span><br><span class="line">    ],</span><br><span class="line">    url=<span class="string">'https://pip.pypa.io/'</span>,</span><br><span class="line">    keywords=<span class="string">'distutils easy_install egg setuptools wheel virtualenv'</span>,</span><br><span class="line"></span><br><span class="line">    author=<span class="string">'The pip developers'</span>,</span><br><span class="line">    author_email=<span class="string">'pypa-dev@groups.google.com'</span>,</span><br><span class="line"></span><br><span class="line">    package_dir=&#123;<span class="string">""</span>: <span class="string">"src"</span>&#125;,</span><br><span class="line">    packages=find_packages(</span><br><span class="line">        <span class="built_in">where</span>=<span class="string">"src"</span>,</span><br><span class="line">        exclude=[<span class="string">"contrib"</span>, <span class="string">"docs"</span>, <span class="string">"tests*"</span>, <span class="string">"tasks"</span>],</span><br><span class="line">    ),</span><br><span class="line">    package_data=&#123; <span class="comment"># 包含一些除了代码之外的数据</span></span><br><span class="line">        <span class="string">"pip._vendor.certifi"</span>: [<span class="string">"*.pem"</span>],</span><br><span class="line">        <span class="string">"pip._vendor.requests"</span>: [<span class="string">"*.pem"</span>],</span><br><span class="line">        <span class="string">"pip._vendor.distlib._backport"</span>: [<span class="string">"sysconfig.cfg"</span>],</span><br><span class="line">        <span class="string">"pip._vendor.distlib"</span>: [<span class="string">"t32.exe"</span>, <span class="string">"t64.exe"</span>, <span class="string">"w32.exe"</span>, <span class="string">"w64.exe"</span>],</span><br><span class="line">    &#125;,</span><br><span class="line">    entry_points=&#123; <span class="comment"># 自动创建一个执行脚本</span></span><br><span class="line">        <span class="string">"console_scripts"</span>: [</span><br><span class="line">            <span class="string">"pip=pip._internal:main"</span>,</span><br><span class="line">            <span class="string">"pip%s=pip._internal:main"</span> % sys.version_info[:1],</span><br><span class="line">            <span class="string">"pip%s.%s=pip._internal:main"</span> % sys.version_info[:2],</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    zip_safe=False,</span><br><span class="line">    python_requires=<span class="string">'&gt;=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*'</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>将开发的程序或者模块推送至PyPi之后，就可以用pip install program的方式进行安装。</p>
 
       
     </div>
@@ -751,7 +747,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">17k</span>
   
 
   
@@ -760,7 +756,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
   
 </div>
 
