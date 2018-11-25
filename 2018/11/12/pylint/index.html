@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="喃喃自语, 肖林鸿, hexo, python, linux, bash">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="前言pylint 是一个 Python 代码分析工具，它分析 Python 代码中的错误，查找不符合代码风格标准和有潜在问题的代码。 简而言之，pylint会查错，也会检查编码风格，很多时候，后者更为重要。 编码风格pylint是按照PEP8的风格去检查代码是否符合书写风格，当然，这个规则是可以改变的。 查看默认的规则1pylint --generate-rcfile 可以用上面的命令行在项目的目">
+<meta name="keywords" content="python,pylint">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pylint">
 <meta property="og:url" content="https://xiaolinhong.github.io/2018/11/12/pylint/index.html">
 <meta property="og:site_name" content="喃喃自语">
-<meta property="og:description" content="喃喃自语, 肖林鸿, hexo, python, linux, bash">
+<meta property="og:description" content="前言pylint 是一个 Python 代码分析工具，它分析 Python 代码中的错误，查找不符合代码风格标准和有潜在问题的代码。 简而言之，pylint会查错，也会检查编码风格，很多时候，后者更为重要。 编码风格pylint是按照PEP8的风格去检查代码是否符合书写风格，当然，这个规则是可以改变的。 查看默认的规则1pylint --generate-rcfile 可以用上面的命令行在项目的目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-13T01:32:33.996Z">
+<meta property="og:updated_time" content="2018-11-25T08:58:01.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pylint">
-<meta name="twitter:description" content="喃喃自语, 肖林鸿, hexo, python, linux, bash">
+<meta name="twitter:description" content="前言pylint 是一个 Python 代码分析工具，它分析 Python 代码中的错误，查找不符合代码风格标准和有潜在问题的代码。 简而言之，pylint会查错，也会检查编码风格，很多时候，后者更为重要。 编码风格pylint是按照PEP8的风格去检查代码是否符合书写风格，当然，这个规则是可以改变的。 查看默认的规则1pylint --generate-rcfile 可以用上面的命令行在项目的目">
 
 
 
@@ -359,12 +359,24 @@
                 
               
 
-              <time title="创建时间：2018-11-13 01:32:33 / 修改时间：09:32:33" itemprop="dateCreated datePublished" datetime="2018-11-13T01:32:33+08:00">2018-11-13</time>
+              <time title="创建时间：2018-11-13 01:32:33" itemprop="dateCreated datePublished" datetime="2018-11-13T01:32:33+08:00">2018-11-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-25 16:58:01" itemprop="dateModified" datetime="2018-11-25T16:58:01+08:00">2018-11-25</time>
               
             
           </span>
@@ -381,7 +393,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/pylint/" itemprop="url" rel="index"><span itemprop="name">pylint</span></a></span>
 
                 
                 
@@ -430,7 +449,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">588</span>
               
 
               
@@ -464,7 +483,16 @@
       
 
       
-        
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>pylint 是一个 Python 代码分析工具，它分析 Python 代码中的错误，查找不符合代码风格标准和有潜在问题的代码。</p>
+<p>简而言之，pylint会查错，也会检查编码风格，很多时候，后者更为重要。</p>
+<h3 id="编码风格"><a href="#编码风格" class="headerlink" title="编码风格"></a>编码风格</h3><p>pylint是按照PEP8的风格去检查代码是否符合书写风格，当然，这个规则是可以改变的。</p>
+<p>查看默认的规则<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pylint --generate-rcfile</span><br></pre></td></tr></table></figure></p>
+<p>可以用上面的命令行在项目的目录中生存一个配置文件，命名为pylintrc，pylint在进行规则搜索的时候，遵循一定的顺序，符合Linux的风格（可以类比bash环境变量）。</p>
+<p>pylint中的提示，分为一下几个级别：</p>
+<blockquote>
+<p>“R” : Refactor for a “good practice” metric violation<br>“C” : Convention for coding standard violation<br>“W” : Warning for stylistic problems, or minor programming issues<br>“E” : Error for important programming issues (i.e. most probably bug)<br>“F” : Fatal for errors which prevented further processing</p>
+</blockquote>
+
       
     </div>
 
@@ -484,7 +512,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"> <i class="fa fa-tag"></i> hexo</a>
+            <a href="/tags/python/" rel="tag"> <i class="fa fa-tag"></i> python</a>
+          
+            <a href="/tags/pylint/" rel="tag"> <i class="fa fa-tag"></i> pylint</a>
           
         </div>
       
@@ -557,8 +587,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -600,7 +639,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -629,7 +672,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -665,6 +712,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码风格"><span class="nav-text">编码风格</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -690,7 +753,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">18k</span>
   
 
   
@@ -699,7 +762,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
   
 </div>
 
